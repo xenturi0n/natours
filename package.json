@@ -1,0 +1,27 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Primer proyecto del curso Advanced CSS and SASS de udemy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "img:cp": "sync-glob 'src/img/*' 'dist/img'",
+    "img:watch": "sync-glob --watch 'src/img/*' 'dist/img'",
+    "html:watch": "onchange './src/**/*.html' -- cp -r '{{changed}}' './dist'",
+    "sass": "node-sass-chokidar ./src/scss -o ./dist/css --watch",
+    "server": "browser-sync start --server './dist' --files './dist/**/*' --no-open",
+    "dev": "concurrently \"npm:img:watch\" \"npm:html:watch\" \"npm:sass\" \"npm:server\""
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "node-sass-chokidar": "^1.3.4",
+    "browser-sync": "^2.26.5",
+    "onchange": "^6.0.0",
+    "concurrently": "^4.1.0",
+    "sync-glob": "^1.4.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

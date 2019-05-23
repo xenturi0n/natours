@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  developer:
+    image: node:lts-alpine
+    ports:
+      - 3000:3000
+      - 3001:3001
+    volumes:
+      - ../:/usr/src/code
+    working_dir: /usr/src/code
+    command: npm run dev
