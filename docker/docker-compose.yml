@@ -9,4 +9,4 @@ services:
     volumes:
       - ../:/usr/src/code
     working_dir: /usr/src/code
-    command: npm run dev
+    command: sh -c "npm run img:cp && npm run dev"
