@@ -55,16 +55,38 @@ body{
 .heading-primary-sub{
     display: block;
     text-align: left;
+    
 }
 
 .heading-primary-main{
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
-}
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    
+} 
 
 .heading-primary-sub{
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 17.7px;
+}
+
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    90%{
+        transform: translateX(10px)
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
 }

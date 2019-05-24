@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "img:cp": "sync-glob 'src/img/*' 'dist/img'",
     "img:watch": "sync-glob --watch 'src/img/*' 'dist/img'",
-    "html:watch": "onchange './src/**/*.html' -- cp -r '{{changed}}' './dist'",
+    "html:cp": "sync-glob './src/*.html' './dist'",
+    "html:watch": "sync-glob --watch  './src/*.html' ./dist'",
     "sass": "node-sass-chokidar ./src/scss -o ./dist/css --watch",
     "server": "browser-sync start --server './dist' --files './dist/**/*' --no-open",
     "dev": "concurrently \"npm:img:watch\" \"npm:html:watch\" \"npm:sass\" \"npm:server\""
