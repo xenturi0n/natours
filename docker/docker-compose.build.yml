@@ -10,4 +10,4 @@ services:
     extends:
       service: base
     working_dir: /usr/src/temp
-    command: sh -c "rm -rf /usr/src/node_modules && cp /usr/src/code/package.json /usr/src/temp && npm i && cp -r node_modules /usr/src/code"
+    command: sh -c "cp /usr/src/code/package.json /usr/src/temp && npm i && cp -r node_modules /usr/src/code"
