@@ -8,6 +8,8 @@ $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
+$color-black: #000;
+
 $color-grey-dark: #777;
 $color-white: #FFF;
 
@@ -41,24 +43,24 @@ body{
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 100%, 100% 85%, 100% 0, 0 0);
-}
 
-.header__logo-box{
-    position: absolute;
-    top: 3rem;
-    left: 3rem;
-}
+    &__logo-box{
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+    }
+    
+    &__logo{
+        height: 3.5rem;
+    }
 
-.header__logo{
-    height: 3.5rem;
-}
-
-.header__text-box{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    &__text-box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 }
 
 .heading-primary{
@@ -66,86 +68,85 @@ body{
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 6rem;
-}
 
-.heading-primary--main,
-.heading-primary--sub{
-    display: block;
-    text-align: left;
+    &--main{
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        display: block;
+        text-align: left;
+    
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;        
+    }
+
+    &--sub{
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: 1.77rem;
+        display: block;
+        text-align: left;
+    
+        animation: moveInRight 1s ease-in-out; 
+    }
     
 }
 
-.heading-primary--main{
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
+.btn{
+    &:link, &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
 
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+        position: relative;
+    }
+
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+        
+        &::after{
+            transform: scale(1.5);
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+
+    &:active{
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 2rem rgba($color-black,.2);
+    }
+
+    &::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        background-color: $color-white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    &--white{
+        background-color: $color-white;
+        color: #777;
+    }
     
-} 
-
-.heading-primary--sub{
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 1.77rem;
-
-    animation: moveInRight 1s ease-in-out; 
+    &--animated{
+        animation: moveInBottom 1s ease-in-out;
+        animation-fill-mode: backwards;
+    }
 }
 
-.btn:link,
-.btn:visited{
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all .2s;
 
-    position: relative;
-}
-
-.btn:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
-
-}
-
-.btn:active{
-    transform: translateY(-1px);
-    box-shadow: 0 .5rem 2rem rgba(0, 0, 0,.2);
-}
-
-.btn::after{
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    background-color: $color-white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
-
-.btn:hover::after{
-    transform: scale(1.5);
-    opacity: 0;
-    z-index: -1;
-}
-
-.btn--white{
-    background-color: $color-white;
-    color: #777;
-}
-
-.btn--animated{
-    animation: moveInBottom 1s ease-in-out;
-    animation-fill-mode: backwards;
-}
 
 @keyframes moveInLeft{
     0%{
