@@ -1,7 +1,7 @@
 .row{
     max-width: $grid_widht;
     margin: 0 auto;    
-    background-color: #EEE;
+    //background-color: #EEE;
     @include clearfix;
 
     &:not(:last-child){
