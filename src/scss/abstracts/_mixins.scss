@@ -1,0 +1,15 @@
+@mixin clearfix() {
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+}
+
+@mixin grid($max-cols){
+    @for $i from 1 through $max-cols{
+        .col-#{$i}-of-#{$max-cols}{
+            width: calc((((100% - (#{$horizontal_gutter} * (#{$max-cols} - 1))) / #{$max-cols}) * #{$i}) + ((#{$i} - 1) * #{$horizontal_gutter}))
+        }
+    }
+}

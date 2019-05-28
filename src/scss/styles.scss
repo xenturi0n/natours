@@ -12,3 +12,28 @@
 @import 'layout/header';
 
 @import 'pages/home';
+
+.container{
+    max-width: 1400px;
+    margin: 6rem auto;
+    background-color: red;
+    @include clearfix;
+}
+
+[class^="col"]{
+    float: left;
+    margin-right: $horizontal_gutter;
+    background-color: orangered;
+    //width: calc((100% - 6rem) / 3);
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+@include grid(3);
+
+@include grid(4);
+
+// (100% - ($h_guter * (total_cols - num_cols))) / total_cols
+// 
