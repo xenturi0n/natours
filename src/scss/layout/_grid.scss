@@ -1,0 +1,24 @@
+.row{
+    max-width: $grid_widht;
+    margin: 0 auto;    
+    background-color: #EEE;
+    @include clearfix;
+
+    &:not(:last-child){
+        margin-bottom: $vertical_gutter;
+    }
+}
+
+[class^="col-"]{
+    float: left;
+    
+    &:not(:last-child){
+        margin-right: $horizontal_gutter;
+    }
+}
+
+@include grid(2);
+
+@include grid(3);
+
+@include grid(4);
