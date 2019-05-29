@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "fonts:watch": "onchange -f 'add change' 'src/fonts/**/*.*' -- cpy '**/*.*' '../../dist/fonts/' --cwd=src/fonts --parents",
+    "fonts:cp": "cpy 'src/fonts/*.*' 'dist/fonts/'",
     "img:cp": "cpy 'src/img/*.*' 'dist/img/'",
     "img:watch": "onchange -f 'add change' 'src/img/**/*.*' -- cpy '**/*.*' '../../dist/img/' --cwd=src/img --parents",
     "html:cp": "cpy '**/*.html' '../dist/' --cwd=src --parents",
@@ -12,7 +14,7 @@
     "sass": "node-sass ./src/scss -o ./dist/css --watch",
     "sass:build": "node-sass ./src/scss -o ./dist/css",
     "server": "browser-sync start --server './dist' --files './dist/**/*' --no-open",
-    "dev": "concurrently \"npm:img:watch\" \"npm:html:watch\" \"npm:sass\" \"npm:server\""
+    "dev": "concurrently \"npm:img:watch\" \"npm:html:watch\" \"npm:fonts:watch\" \"npm:sass\" \"npm:server\""
   },
   "dependencies": {},
   "devDependencies": {

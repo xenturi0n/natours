@@ -7,8 +7,10 @@ build:
 	mkdir dist;
 	mkdir dist/css;
 	mkdir dist/img;
+	mkdir dist/fonts
 	npm run "img:cp";
-	npm run "html:cp"
+	npm run "html:cp";
+	npm run "fonts:cp";
 	npm run "sass:build"
 
 dev:
