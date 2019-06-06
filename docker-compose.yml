@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  developer:
+    image: node:8-jessie
+    ports:
+      - 3000:3000
+      - 3001:3001
+    volumes:
+      - ./:/usr/src/code
+      - ~/.gitconfig:/root/.gitconfig
+    working_dir: /usr/src/code
+    command: sleep infinity

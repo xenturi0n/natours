@@ -18,4 +18,7 @@ dev:
 
 install:
 	rm -rf node_modules
-	npm i
+	mkdir -p /usr/src/temporal/node_modules
+	cp package.json /usr/src/temporal
+	npm install --prefix /usr/src/temporal
+	mv -f /usr/src/temporal/node_modules /usr/src/code

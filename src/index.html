@@ -130,7 +130,7 @@
             </div> <!-- row -->
         </section><!-- section-features-->
 
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Most popular tours
@@ -168,7 +168,7 @@
                                         $297
                                     </p>
                                 </div> <!-- card__price-box -->
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div> <!-- card__cta -->
                         </div> <!-- card__side--back-1 -->
                     </div><!-- card -->
@@ -204,7 +204,7 @@
                                         $497
                                     </p>
                                 </div> <!-- card__price-box -->
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div> <!-- card__cta -->
                         </div> <!-- card__side--back-2 -->
                         </div><!-- card -->
@@ -240,7 +240,7 @@
                                         $897
                                     </p>
                                 </div> <!-- card__price-box -->
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div> <!-- card__cta -->
                         </div> <!-- card__side--back-3 -->
                     </div><!-- card -->
@@ -390,41 +390,25 @@
             </div> <!-- col-1-of-2 -->
         </div><!-- row -->
     </footer> <!-- footer -->
-
-    <div class="popup">
+    
+    <div class="popup" id="popup">
         <div class="popup__content">
-            <div class="popup__image-container">
-                <div class="popup__image-box">&nbsp;
-                    <img src="../img/nat-8.jpg" alt="Story image" class="popup__image">
-                </div>
-                <div class="popup__image-box">&nbsp;
-                    <img src="../img/nat-9.jpg" alt="Story image" class="popup__image">
-                </div>
-            </div> <!-- popup__image-container -->
-            <div class="popup__details u-margin-top-big">
-                <div class="u-center-text u-margin-bottom-small">
-                    <h2 class="heading-secondary">
-                        Booking now
-                    </h2>
-                </div>
+            <div class="popup__left">
+                <img src="./img/nat-8.jpg" alt="Story_image" class="popup__image">
+                <img src="./img/nat-9.jpg" alt="Story_image" class="popup__image">
+            </div>
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">Booking now</h2>
                 <h3 class="heading-tertiary u-margin-bottom-small">
                     Important, read the terms and contitions first
                 </h3>
-                <div class="col-1-of-2">
-                    <p class="paragraph">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A reiciendis perferendis saepe facere libero est sit laborum vero voluptates nesciunt, minus.
-                    </p>
-                </div>
-                <div class="col-1-of-2">
-                    <p class="paragraph">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A reiciendis perferendis saepe facere libero est sit laborum vero voluptates nesciunt, minus.
-                    </p>
-                </div>      
-            </div> <!-- popup__details-->
-            <div class="popup__btn-box u-margin-top-medium">
+                <p class="paragraph popup__paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A reiciendis perferendis saepe facere libero est sit laborum vero voluptates nesciunt, minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id itaque sed doloremque distinctio deserunt officia, expedita accusantium.
+                </p>
                 <a href="#" class="btn btn--green">book now</a>
             </div>
-        </div> <!-- popup__content -->  
-    </div> <!-- popup -->
+        </div>
+    </div>
 </body>
 </html>
