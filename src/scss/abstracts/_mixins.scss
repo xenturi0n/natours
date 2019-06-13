@@ -20,3 +20,43 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600PX:      Phone
+600 - 900px:    Tablet Portrait
+900 - 1200px:   Tablet Landscape
+[1200 - 1800px] Is where our normal styles apply
+1800 + :        Big Desktop
+*/
+
+@mixin respond-phone{
+    @media (max-width: 600px){
+        @content;
+    }
+}
+
+/*
+$breakpoint argument choices:
+- phone
+- tablet-portrait
+- tablet-landscape
+- big-desktop
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint){
+    @if $breakpoint == phone{
+        @media (max-width: 37.5em){ @content; }     //600px
+    }
+    @else if $breakpoint == tablet-portrait{
+        @media (max-width: 56.25em){ @content; }      //900px
+    }
+    @else if $breakpoint == tablet-ladscape{
+        @media (max-width: 75em){ @content; }     //1200px
+    }
+    @else if $breakpoint == big-desktop{
+        @media (min-width: 112.5em){ @content; }     //1800px
+    }
+}
