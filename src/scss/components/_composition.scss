@@ -10,6 +10,13 @@
         outline-offset: 1rem;
         transition: all .2s;
 
+        @include respond(tablet-portrait){
+            float: left;
+            position: relative;
+            width: calc(100% / 3);
+            box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+        }
+
         &:hover{
             outline: 1rem solid $color-primary;
             transform: scale(1.05) translateY(-.5rem);
@@ -20,16 +27,29 @@
         &--1{
             top: -2rem;
             left: 0;
+
+            @include respond(tablet-portrait){
+                top: 0;
+            }
         }
 
         &--2{
             top: 2rem;
             right: 0;
+
+            @include respond(tablet-portrait){
+                top: 0;
+            }
         }
 
         &--3{
             top: 10rem;
             left: 20%;
+
+            @include respond(tablet-portrait){
+                top: 0;
+                left: 0;
+            }
         }
     }
 
