@@ -22,3 +22,7 @@ install:
 	cp package.json /usr/src/temporal
 	npm install --prefix /usr/src/temporal
 	mv -f /usr/src/temporal/node_modules /usr/src/code
+
+install_manjaro:
+	rm -rf node_modules
+	npm install
