@@ -20,7 +20,12 @@ body{
     
         animation-name: moveInLeft;
         animation-duration: 1s;
-        animation-timing-function: ease-in-out;        
+        animation-timing-function: ease-in-out;
+        
+        @include respond(phone){
+            font-size: 5rem;
+            letter-spacing: 1.4rem;
+        }
     }
 
     &--sub{
@@ -30,7 +35,11 @@ body{
         display: block;
         text-align: left;
     
-        animation: moveInRight 1s ease-in-out; 
+        animation: moveInRight 1s ease-in-out;
+        
+        @include respond(phone){
+            letter-spacing: .75rem;
+        }
     }  
 }
 
@@ -45,6 +54,14 @@ body{
     color: transparent;
     letter-spacing: 2px;
     transition: all .2s;
+
+    @include respond(tablet-portrait){
+        font-size: 3rem;
+    }
+
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
 
     &:hover{
         transform: skewY(2deg) skewX(15deg) scale(1.1);

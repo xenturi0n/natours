@@ -31,4 +31,11 @@ body{
     color: $color-grey-dark;
     padding: 3rem;
     box-sizing: border-box;
+
+    @include respond(tablet-portrait){ // <= 900px
+        @include respond(tablet-portrait){ // <= 900px
+            padding: 0;
+    }
+    }
+
 }

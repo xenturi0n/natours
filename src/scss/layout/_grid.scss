@@ -6,14 +6,31 @@
 
     &:not(:last-child){
         margin-bottom: $vertical_gutter;
+
+        @include respond(tablet-portrait){
+            margin-bottom: $vertical_gutter_small;
+        }
+    }
+
+    @include respond(tablet-portrait){
+        max-width: 50rem;
     }
 }
 
 [class^="col-"]{
     float: left;
+
+    @include respond(tablet-portrait){
+        width: 100% !important;
+    }
     
     &:not(:last-child){
         margin-right: $horizontal_gutter;
+
+        @include respond(tablet-portrait){
+            margin-right: 0;
+            margin-bottom: $vertical_gutter_small;
+        }
     }
 }
 

@@ -7,6 +7,10 @@
     background-position: top;
     clip-path: polygon(0 100%, 100% 85%, 100% 0, 0 0);
 
+    @include respond(phone){
+        clip-path: polygon(0 100%, 100% 90vh, 100% 0, 0 0);
+    }
+
     &__logo-box{
         position: absolute;
         top: 3rem;
