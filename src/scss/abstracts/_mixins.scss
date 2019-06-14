@@ -55,7 +55,7 @@ ORDER: base + tipography > general layout + grid > page layout > components
     @else if $breakpoint == tablet-portrait{
         @media (max-width: 56.25em){ @content; }      //900px
     }
-    @else if $breakpoint == tablet-ladscape{
+    @else if $breakpoint == tablet-landscape{
         @media (max-width: 75em){ @content; }     //1200px
     }
     @else if $breakpoint == big-desktop{
