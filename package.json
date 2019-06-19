@@ -1,7 +1,7 @@
 {
   "name": "natours",
   "version": "1.0.0",
-  "description": "Primer proyecto del curso Advanced CSS and SASS de udemy",
+  "description": "TODO: probar el paquete npm-run-all para correr tareas en paralelo o en seri, Primer proyecto del curso Advanced CSS and SASS de udemy",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
