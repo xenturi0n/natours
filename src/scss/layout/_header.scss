@@ -7,7 +7,11 @@
     background-position: top;
     clip-path: polygon(0 100%, 100% 85%, 100% 0, 0 0);
 
-    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 2000px) {
+    @supports (clip-path: polygon(0,0)) or (-webkit-clip-path: polygon(0,0)){
+        
+    }
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 2000px) {
         background-image:   linear-gradient(to bottom, rgba($color-secondary-light, 0.8), rgba($color-secondary-dark,0.8)), 
                         url('../img/hero-small.jpg');
     }
